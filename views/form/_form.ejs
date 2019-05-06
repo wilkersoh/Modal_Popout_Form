@@ -1,0 +1,39 @@
+<form class="revenue-form" action="/" method="post">
+    <div class="rev-title">
+        <label for="revInput"><p>Revenue Group Title</p></label>
+        <input id="revInput" name="revInput" type="text" placeholder="Revenue title..">
+    </div>
+
+    <%- include('./Component/revCondition.ejs') %>
+
+    <div class="rev-rule">
+        <%- include('./Component/addNew.ejs') %>
+        
+        <div class="addRule">
+            <input type="text" name="insert" placeholder="insert parameter..." autocomplete="off">
+            <span>add rule</span>
+        </div>
+
+        <div class="icon">
+            <i class="fas fa-minus-circle"></i>
+            <!-- add one more rule  -->
+            <i class="fas fa-plus-circle active"></i>
+        </div>
+        <!-- add rule -->
+        <div class="insertRule">
+            <input type="text" name="add-rule" class="insert add-rule" placeholder="insert parameter..." autocomplete="off">
+            <span>add rule</span>
+        </div>
+    </div>
+
+    <div class="num">
+        <p>then revenue is 
+            <input type="text" name="numb" placeholder="only numbers">
+        </p>
+    </div>
+    <div>
+        <button class="btn btnYes">Confirm</button>
+        <button class="btn btnNo">Cancel</button>
+    </div>   
+</form>
+    
