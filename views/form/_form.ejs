@@ -5,27 +5,40 @@
     </div>
 
     <%- include('./Component/revCondition.ejs') %>
+    <div class="rules">
+        <div class="rev-rule">
+            <div class="rule">
+                <div class="ruleNum"></div>
+                <!-- addNew 2elemts -->
+                <%- include('./Component/addNew.ejs') %> 
 
-    <div class="rev-rule">
-        <%- include('./Component/addNew.ejs') %>
+                <div class="insert-rule">
+                    <div class="rule-div">
+                        <div class="addRule">
+                            <input name="addRule" placeholder="insert parameter..." autocomplete="off">
+                            <span id="addedRule">add rule</span>
+                        </div>
+                
+                        <div class="icon">
+                            <i class="fas fa-minus-circle"></i>
+                            <!-- add one more rule  -->
+                            <i class="fas fa-plus-circle active"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- insert New rule -->
+
         
-        <div class="addRule">
-            <input type="text" name="insert" placeholder="insert parameter..." autocomplete="off">
-            <span>add rule</span>
-        </div>
 
-        <div class="icon">
-            <i class="fas fa-minus-circle"></i>
-            <!-- add one more rule  -->
-            <i class="fas fa-plus-circle active"></i>
-        </div>
-        <!-- add rule -->
-        <div class="insertRule">
-            <input type="text" name="add-rule" class="insert add-rule" placeholder="insert parameter..." autocomplete="off">
-            <span>add rule</span>
-        </div>
+
     </div>
 
+
+
+    
     <div class="num">
         <p>then revenue is 
             <input type="text" name="numb" placeholder="only numbers">

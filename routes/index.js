@@ -6,13 +6,14 @@ router.get('/', (req, res) => {
     res.render('index');
 })
 
+
 router.post('/', async (req, res) => {
     const inv = new ToInv({
        title: req.body.revInput,
        condition: req.body.revCondition,
        revType: req.body.revType,
        addNewType: req.body.addNewType,
-       rule: req.body.insert,
+       rule: req.body.addRule,
        revenue: req.body.numb,
     })
 
