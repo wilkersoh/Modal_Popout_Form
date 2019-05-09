@@ -9,21 +9,24 @@
         <div class="rev-rule">
             <div class="rule">
                 <div class="ruleNum"></div>
-                <!-- addNew 2elemts -->
+
+                <!-- addNew 2elemts child -->
                 <%- include('./Component/addNew.ejs') %> 
 
                 <div class="insert-rule">
                     <div class="rule-div">
-                        <div class="addRule">
-                            <input name="addRule" placeholder="insert parameter..." autocomplete="off">
-                            <span id="addedRule">add rule</span>
-                        </div>
-                
-                        <div class="icon">
-                            <i class="fas fa-minus-circle"></i>
-                            <!-- add one more rule  -->
-                            <i class="fas fa-plus-circle active"></i>
-                        </div>
+                        <!-- <div> -->
+                            <div class="addRule">
+                                <input name="addRule" placeholder="insert parameter..." autocomplete="off">
+                                <span id="addedRule" class="addedRule">add rule</span>
+                            </div>  
+                    
+                            <div class="icon">
+                                <i class="fas fa-minus-circle"></i>
+                                <!-- add one more rule  -->
+                                <i class="fas fa-plus-circle active"></i>
+                            </div>
+                        <!-- </div> -->
                     </div>
                 </div>
 
