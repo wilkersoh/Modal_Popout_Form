@@ -45,75 +45,73 @@ input:focus{
 }
 
 /* Rulesss */
-/* .rules{
-    margin-bottom: 1.5rem;
+.rules {
+    display:flex;
+    flex-direction: column;
 }
 
 .rule{
-    position: relative;
     display: grid;
-    grid-template-columns: repeat(2, 100px) auto;
-    grid-template-rows: 30px;
+    grid-template-columns:100px 80px auto;
     grid-gap: 5px;
-    height: 40px;
-    border:1px solid blue;
 }
 
-.insert-rule,
-.insertRule{
-    display:grid;
-    grid-template-columns: 500px 50px;
+.rule select{
+    height: 30px;
 }
 
-.insertRule{
-    grid-column: 3 / 4;
+.ruleNum{
+    height:20px;
+    grid-column: 1 / 5;
 }
 
-.rev-title input,
-.rule input,
-.num input {
-    padding: 8px;
+.insert-rule{
+    grid-column: 3 / 5;
+}
+
+.rule-div{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.rule-div input{
+    padding: 7px;
+    width: 100%;
 }
 
 .addRule,
 .insertRule{
     position: relative;
 }
+.addRule{
+    width: 90%;
+}
 
-.addRule span,
-.insertRule span{
+.insertRule{
+    display:flex;
+    width:93%;
+}
+
+.addedRule,
+.removeText{
     position: absolute;
-    display:inline-block;
-    top:10px;
-    width: 150px;
-    font-weight: 600;
-    color: green;
+    top:50%;
     left: calc(100% - 100px);
+    transform: translateY(-50%);
     cursor: pointer;
 }
-.insertRule span{
-    left: calc(100% - 150px);
+.addedRule{
+    color: aqua;
 }
 
-
-.ruleNum{
-    padding: 5px 5px 5px 0;
-    font-weight: 800;
-    grid-row: 1 / 2;
-    grid-column: 1 / 5;
-}
-
-.addRule input,
-.insertRule input {
-    width:100%;
+.removeText{
+    color:red;
 }
 
 .icon{
-    display:flex;
-    justify-content: space-around;
-    align-items: center;
-    grid-column: 2 / 3;
-} */
+    align-self: center;
+    justify-self: center;
+}
 
 .btn{
     padding: .5em 1em;
