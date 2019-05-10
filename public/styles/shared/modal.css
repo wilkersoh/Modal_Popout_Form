@@ -16,8 +16,9 @@
 }
 
 .btn-modal{
+    width: 300px;
     padding: 1em 2em;
-    background-color: aquamarine;
+    background-color: goldenrod;
     font-weight: 900;
     border: none;
     cursor: pointer;

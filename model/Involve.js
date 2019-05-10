@@ -8,17 +8,17 @@ const revenueSchema = new mongoose.Schema({
     condition: {
         type: String,
     },
-    revType: {
+    revType: [{
         type: String,
         required: 'This revType is required'
-    },
-    addNewType: {
+    }],
+    addNewType: [{
         type: String,
         required: 'This newType is required'
-    },
-    rule: {
+    }],
+    rule: [{
         type: String,
-    },
+    }],
     revenue: {
         type: Number,
         required: 'Please provide revenue'

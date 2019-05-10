@@ -22,7 +22,7 @@ router.post('/', async (req, res) => {
         await inv.save();
         res.redirect('/');
     } catch {
-        alert('Failed to submit')
+        console.log('Failed to submit')
         res.redirect('/');
     }
 

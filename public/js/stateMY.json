@@ -1,0 +1,82 @@
+[
+    {
+        "state": "Labuan",
+        "year": "2016",
+        "revenue": "5,984"
+    },
+    {
+        "state": "Perlis",
+        "year": "2016",
+        "revenue": "5,642"
+    },
+    {
+        "state": "Kelantan",
+        "year": "2016",
+        "revenue": "23,020"
+    },
+    {
+        "state": "Terrenganu",
+        "year": "2016",
+        "revenue": "32,270"
+    },
+    {
+        "state": "Malacca",
+        "year": "2016",
+        "revenue": "37,274"
+    },
+    {
+        "state": "Kedah",
+        "year": "2016",
+        "revenue": "40,596"
+    },
+    {
+        "state": "Negeri Sembilan",
+        "year": "2016",
+        "revenue": "42,389"
+    },
+    {
+        "state": "Pahang",
+        "year": "2016",
+        "revenue": "52,452"
+    },
+    {
+        "state": "Perak",
+        "year": "2016",
+        "revenue": "67,629"
+    },
+    {
+        "state": "Penang",
+        "year": "2016",
+        "revenue": "81,284"
+    },
+    {
+        "state": "Sabah",
+        "year": "2016",
+        "revenue": "80,167"
+    },
+    {
+        "state": "Johor",
+        "year": "2016",
+        "revenue": "116,679"
+    },
+    {
+        "state": "Sarawak",
+        "year": "2016",
+        "revenue": "121,414"
+    },
+    {
+        "state": "Kuala Lumpur",
+        "year": "2016",
+        "revenue": "190,075"
+    },
+    {
+        "state": "Selangor",
+        "year": "2016",
+        "revenue": "280,698"
+    },
+    {
+        "state": "Malaysia",
+        "year": "2016",
+        "revenue": "1,230,120"
+    }
+]

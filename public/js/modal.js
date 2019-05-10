@@ -66,14 +66,12 @@ const addMoreRule = (parent) => {
     `
     parent.insertAdjacentHTML('beforeend', newChild);
 
+    // Diplsay Rule num
     const ruleNum = document.querySelectorAll('.ruleNum');
     for(i = 0; i < ruleNum.length; i++){
         ruleNum[i].innerHTML = `Rule ${i + 1}`;
     }
 }
-
-
-
 
 delagationDOM.addEventListener('click', (e) => {
     if(e.target.classList.contains('addedRule')){
@@ -136,7 +134,96 @@ const optionSelection = () => {
 }
 */
 
-// const openModalButtons = document.querySelectorAll('[data-modal-target]');
+const search = document.getElementById('search');
+const mathcList = document.getElementById('match-list');
+
+const searchState = async (searchValue) => {
+    // Data from Wikipedia | 国家生产总量 2016 | Root是 Public folder！
+    const res = await fetch('js/stateMY.json');
+    const data = await res.json();
+    // if match
+    let match = data.filter(doc => {
+        // search pattern - 'g- global' 'i- 忽视大小写 match' | 用 new RegExp 不必斜杠  /\w+/ 
+        const regex = new RegExp(`^${searchValue}`, 'gi');
+        return doc.state.match(regex) 
+    })
+
+    // 防止他会显示全部资料 if 0 的话
+    if(searchValue.length === 0){
+        match = [];
+        mathcList.innerHTML = '';
+    }
+    showResBar(match)
+}
+
+const showResBar = (match) => {
+    if( match.length > 0 ){
+        const html = match.map(doc => {
+            return `
+                <div class="searchOutPut">
+                  <p>${doc.year} -  Revenue 
+                    <span class="outPutSearch-small">(${doc.state})</span>
+                    : 
+                    <span style="color: aqua">${doc.revenue}</span> million</p> 
+                </div>
+            `
+        }).join('')
+
+        mathcList.innerHTML = html;
+
+    }
+}
+// AutoComplete Searching...
+search.addEventListener('input', () => searchState(search.value));
+
+// Data Show in the Table
+const stateName = document.querySelector('.showData');
+const showDataInTable = async () => {
+    const res = await fetch('js/stateMy.json');
+    const data = await res.json();
+
+    let dataDOM = data.map((doc, i) => 
+        `
+            <p>${doc.state}</p>
+            <p>${doc.revenue}</p>
+            <p>${doc.year}</p>
+        `
+    ).join('')
+
+    stateName.insertAdjacentHTML('beforeend', dataDOM);
+}
+
+showDataInTable();
+
+// dropDown handling..
+const drops = document.querySelectorAll('.dropdown');
+
+class Dropdown {
+    constructor(container){
+        this.container = container;
+        this.trigger = container.querySelector('.trigger')
+        this.content = container.querySelector('.content')
+    }
+    init(){
+        this.trigger.addEventListener('click', () => {
+            this.trigger.classList.toggle('active');
+            this.content.classList.toggle('active');
+        })
+    }
+}
+
+drops.forEach(drop => {
+    const instance = new Dropdown(drop);
+    instance.init();
+})
+
+
+
+
+
+
+
+
 
 
 

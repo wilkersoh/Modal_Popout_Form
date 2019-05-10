@@ -1,4 +1,6 @@
 @import "shared/modal.css";
+@import "shared/header.css";
+@import "shared/container.css";
 
 *, *::before, *::after{
     box-sizing: border-box;
@@ -6,8 +8,9 @@
 
 body{
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin: 2em;
+    margin: 0;
     padding: 0;
 }
 

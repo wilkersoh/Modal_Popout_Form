@@ -1,0 +1,81 @@
+.container{
+    display:flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.container-title h4{
+    border-bottom: 1px solid black;
+    margin-bottom: 0;
+}
+
+.container-title p{
+    font-size: .8rem;
+    margin: 0;
+}
+
+.big{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 1rem;
+}
+.grid-table,
+.showData{
+    grid-column: 1 / -1;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-table p,
+.showData p{
+    padding: 10px;
+    margin: 0;
+    border:1px solid black;
+    border-top: 0;
+}
+
+.grid-table p{
+    border-top:1px solid black;
+    font-weight: 900;
+}
+
+/* dropdown  */
+
+.dropdown .trigger{
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+    transition: all 750ms ease-in-out;
+}
+
+.dropdown .trigger::after{
+    content: ">";
+    display: inline-block;
+    position: absolute;
+    right: 15px;
+    transform: rotate(90deg) scale(.5, 1);
+    font-weight: bold;
+    /* transform-origin: top; */
+    transition: all 750ms ease-in-out;
+    
+}
+
+.dropdown .trigger.active::after{
+    transform: rotate(-90deg) scale(.5, 1);
+}
+
+.dropdown .content{
+    display: none;
+    
+}
+
+.dropdown .content.active{
+    display:block;
+}
+
+
+
+
+
