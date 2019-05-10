@@ -6,10 +6,33 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/styles/style.css" tpye="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script defer src="js/modal.js"></script>
     <title>Revenue</title>
 </head>
 <body>
-    <%- include('./form/container.ejs') %>
-    <script defer src="js/modal.js"></script>
+    <%- include('./header/header.ejs') %> 
+    <%- include('./form/container.ejs') %>  
+    <div class="dropdown">
+        <div class="trigger">2016 Malaysia GDP</div>
+        <div class="container content">
+            <div class="container-title">
+                <h4>Gross Domestic Product by State</h4>
+                <p>The following table is a list of the GDP of Malaysian states released by the Department of Statistics Malaysia.</p>
+            </div>
+            <div class="big">
+                <div class="grid-table">
+                    <p>State or Federal Territory</p>
+                    <p>Gross Domestic Product ( <span style="color:blue">RM</span> Million)</p>
+                    <p>Year</p>
+                </div>
+
+                <div class="showData">
+                    <!-- from js -->
+                </div>
+            </div>
+
+        </div> 
+    </div>
+
 </body>
 </html>
