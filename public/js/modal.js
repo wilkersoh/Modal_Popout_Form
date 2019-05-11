@@ -173,9 +173,9 @@ const showResBar = (match) => {
 
     }
 }
-// AutoComplete Searching...
-search.addEventListener('input', () => searchState(search.value));
 
+// Searching bar...
+search.addEventListener('input', () => searchState(search.value));
 // Data Show in the Table
 const stateName = document.querySelector('.showData');
 const showDataInTable = async () => {
@@ -216,6 +216,26 @@ drops.forEach(drop => {
     const instance = new Dropdown(drop);
     instance.init();
 })
+
+// errors form reminder
+/*
+class reminderError {
+    constructor(){
+        this.reminder = document.createElement('div')
+    }
+    static init(message){
+        this.reminder.classList.add(reminder);
+        document.querySelector('body').appendChild(this.reminder);
+
+        this.reminder.textContent = message;
+        this.reminder.classList.add('active');
+        setTimeout(() => {
+            this.reminder.classList.remove('active');
+        }, 4000)
+    }
+}
+
+*/
 
 
 

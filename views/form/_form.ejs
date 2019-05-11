@@ -9,9 +9,18 @@
         <div class="rev-rule">
             <div class="rule">
                 <div class="ruleNum"></div>
-
-                <!-- addNew 2elemts child -->
-                <%- include('./Component/addNew.ejs') %> 
+                <select id="addNew" class="revType" name="revType">
+                    <option>Js Developer</option>
+                    <option>Ruby Developer</option>
+                    <option>Php Developer</option>
+                
+                </select>
+                <select id="addNewType" class="addNewType" name="addNewType">
+                    <option>Senior</option>
+                    <option>Junior</option>
+                    <option>Entry-Level</option>
+                
+                </select>
 
                 <div class="insert-rule">
                     <div class="rule-div">

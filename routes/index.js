@@ -6,27 +6,27 @@ router.get('/', (req, res) => {
     res.render('index');
 })
 
-
-
 router.post('/', async (req, res) => {
+    const {revInput, revCondition, revType, addNewType, addRule, numb} = req.body
     const inv = new ToInv({
-       title: req.body.revInput,
-       condition: req.body.revCondition,
-       revType: req.body.revType,
-       addNewType: req.body.addNewType,
-       rule: req.body.addRule,
-       revenue: req.body.numb,
+        title: revInput,
+        condition: revCondition,
+        revType: revType,
+        addNewType,
+        rule: addRule,
+        revenue: numb
+    })
+    await inv.save((err, doc) => {
+        if(!err){
+            res.redirect('/');
+        } else {
+            if(!inv.title || !inv.condition || !inv.revType || !inv.addNewType || !inv.rule || !inv.revenue){
+                
+                res.render('error')
+            }
+        }
     })
 
-    try{
-        await inv.save();
-        res.redirect('/');
-    } catch {
-        console.log('Failed to submit')
-        res.redirect('/');
-    }
-
 })
-
 
 module.exports = router;
